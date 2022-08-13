@@ -1,0 +1,2 @@
+﻿dotnet ef dbcontext scaffold "UserID=postgres;Password=122333;Server=localHost;port=5432;Database=HaberSitesi;Pooling=true;" Npgsql.EntityFrameworkCore.PostgreSQL --output-dir Model --context-dir Context --context HaberContext --force
+//dotnet user-secrets set ConnectionStrings:Haber "UserID=postgres;Password=122333;Server=localHost;port=5432;Database=HaberSitesi;Pooling=true;"
