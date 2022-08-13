@@ -1,0 +1,81 @@
+﻿<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Admin Sayfası</h1>
+        <p class="lead">Admin her zaman her koşulda haklıdır.</p>
+    </div>
+</div>
+<div ng-controller="HaberController" ng-submit="haberEkleme()" style="width:50%">
+    <h1>Haber Ekleme Kısmı <span class="badge badge-secondary">Haber Ekle</span></h1>
+    <label for="basic-url">Your vanity URL</label>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Fotoğraf Url'si ekle</span>
+        </div>
+        <input type="text" class="form-control" ng-model="HaberInfo.Pictures" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Haber Başlığı Ekle</span>
+        </div>
+        <input type="text" class="form-control" ng-model="HaberInfo.NewsTitle" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" ng-model="HaberInfo.NewsContent">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="Haber Ekle"></textarea>
+    </div>
+    <div>
+        <input type="datetime" id="myDatetime" value="2022-05-08T10:57Z">
+        <button ng-click="myFunction()">Zamanı Ekle</button>
+    </div>
+    <button type="submit" class="btn btn-primary">Haberi Ekle</button>
+
+</div>
+<div class="haber güncelleme">
+    <h1>Haber Güncelleme Kısmı <span class="badge badge-secondary">Haber Güncelle</span></h1>
+    <label for="basic-url">Your vanity URL</label>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3"></span>
+        </div>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Haber Başlığı Ekle</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="Haber Ekle"></textarea>
+    </div>
+</div>
+<div class="haber silme">
+    <h1>Haber Silme Kısmı <span class="badge badge-secondary">Haber Sil</span></h1>
+  
+
+</div>
+<div class="user cikartma">
+
+
+
+
+
+
+
+</div>
+<div class="user update">
+
+
+
+
+
+
+</div>
+<script>
+
+</script>

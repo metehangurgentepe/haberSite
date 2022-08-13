@@ -1,0 +1,26 @@
+﻿<div class="tumhaberler">
+    <div ng-controller="GetAllController">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th class="col-sm-1" scope="col">#</th>
+                    <th class="col-sm-2" scope="col">Haber Başlığı</th>
+                    <th class="col-sm-1" scope="col">Yazar</th>
+                    <th class="col-sm-1" scope="col">Kategori</th>
+                    <th class="col-sm-2" scope="col">Tarih</th>
+                    <th class="col-sm-8" scope="col">Haber İçeriği</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tumhaberler" ng-repeat="x in allNews">
+                    <th scope="row"></th>
+                    <td>{{x.newsTitle}}</td>
+                    <td>{{x.newsId}}</td>
+                    <td>{{x.categoryId}}</td>
+                    <td>{{x.datePosted}}</td>
+                    <td>{{x.newsContent}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

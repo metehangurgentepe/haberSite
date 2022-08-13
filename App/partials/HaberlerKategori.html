@@ -1,0 +1,16 @@
+﻿<div ng-controller="GetController">
+    zczxczc
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" ng-repeat="x in haber1">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{x.pictures}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{x.newsTitle}}</h5>
+                        <p class="card-text">{{x.newsContent}}</p>
+                        <a href="#/haberdetay/{{x.newsId}}" class="btn btn-primary">Habere git...</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

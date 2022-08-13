@@ -1,0 +1,66 @@
+﻿    <div ng-controller="ListController" class="offset-2 col-lg-8" >
+       
+        <main role="main">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item" ng-repeat="x in lastThreeElement" ng-class="{0:'active'}[$index]">
+
+                        <img class="d-block w-100" src="{{x.pictures}}" alt="First slide" height="500">
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                                <h1>{{x.newsTitle}}</h1>
+                                <p>{{x.newsContent}}</p>
+                                <p><a class="btn btn-lg btn-primary" href="#/haberdetay/{{x.newsId}}" role="button">Detayları gör...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <br />
+            <br />
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm" ng-repeat="x in pagedNews">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{x.pictures}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{x.newsTitle}}</h5>
+                                <p class="card-text">{{x.newsContent}}</p>
+                                <a href="#/haberdetay/{{x.newsId}}" class="btn btn-primary">Habere git...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"ng-repeat="x in maxPage" ><a ng-click="goToPage(x, itemsPerPage)" class="page-link">{{x}}</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </main>
+        
+
+    </div>
+
+
+
+
+
+

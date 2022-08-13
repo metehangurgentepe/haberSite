@@ -1,0 +1,8 @@
+﻿<div ng-controller="HaberDetayController">
+    <div class="news-content" ng-repeat="x in GetNewById">
+        <img class="" src="{{x.pictures}}">
+        <h3> {{x.newsTitle}}</h3>
+        <p> {{x.newsContent}}</p>
+        <span class="news-content">{{x.DatePosted}}</span>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/angularjs-toast.min.css" rel="stylesheet" />
+    <link href="CSS/tasarım.css" rel="stylesheet" />
+    <!--<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">-->
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <script src="JS/jquery-3.2.1.slim.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <!--<script src="JS/bootstrap.bundle.js"></script>-->
+    <script src="JS/angular.min.js"></script>
+    <script src="JS/angular-route.min.js"></script>
+    <script src="JS/App.js"></script>
+    <script src="JS/route.js"></script>
+    <script src="JS/angular-sanitize.js"></script>
+    <script src="JS/angular-animate.min.js"></script>
+    <script src="JS/angularjs-toast.min.js"></script>
+    <script src="JS/angular-cookies.min.js"></script>
+    <script src="JS/angular-cookies.js"></script>
+
+</head>
+<body ng-controller="MainController">
+
+
+    <!--<div>
+        <p><a href="#!/">Anasayfa</a></p>
+        <p><a href="#!/News">Haberler</a></p>
+        <p><a href="#!/News_Title">Haberlerin Başlıkları</a></p>
+        <p><a href="#!/Content">İçerik</a></p>
+    </div>-->
+
+    <toast></toast>
+    <header>
+        <div class="header headroom headroom--not-bottom headroom--not-top headroom--pinned">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#!/default.html">Güncel Haberler</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#!/default.html">Anasayfa <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Kategoriler
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" ng-repeat="x in kategs" href="#!/Content/{{x.categoryId}}">{{x.categoryName}}</a>
+
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/login">Giriş Yap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/signup">Kayıt Ol</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="logOut()">Çıkış Yap</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/tumhaberler">Tüm Haberler</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" ng-model="arama" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="Ara()">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+
+    <div class="row">
+        <div class="col-lg-12" ng-view="" style="padding:20px;">
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
